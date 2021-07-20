@@ -9,11 +9,13 @@ const Root = () => {
       <header className='header'>All about Pups</header>
       <HashRouter>
         <Switch>
-        <Route exact path='/'> <Home /></Route>
-        <Route exact path='/result' component={Result}></Route>
+          <Route exact path='/'> <Home /></Route>
+          <Route exact path='/result' component={Result}></Route>
         </Switch>
       </HashRouter>
-      <footer className='footer'>satomi dean</footer>
+      <footer className='footer'>
+        <a href="https://www.linkedin.com/in/satomi-dean-3ab13b105/">satomi dean</a>
+      </footer>
     </div>
   )
 }

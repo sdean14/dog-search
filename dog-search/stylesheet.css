@@ -22,6 +22,7 @@ span, article, footer, time, small {
   font-family: Palatino, "Palatino LT STD", "Palatino Linotype", "Book Antiqua", Georgia, serif;
   font-size: 20px;
   font-weight: 600;
+  width: 100vw;
   background-color: rgb(226, 192, 110);
   color: rgb(66, 63, 71);
   min-height: 100vh;
@@ -36,6 +37,7 @@ span, article, footer, time, small {
   background-color: rgb(115, 194, 170);
   font-size: 40px;
   padding: 20px;
+  padding-left: 50px;
   font-family: Palatino, "Palatino LT STD", "Palatino Linotype", "Book Antiqua", Georgia, serif;
   grid-area: header;
 }
@@ -89,6 +91,14 @@ input {
 } 
 .all-dogs {
   flex-wrap: wrap;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
   padding: 10px;
-  overflow-wrap: break-word;
+}
+.each-breed{
+  margin-right: 10px;
+}
+ .each-breed:hover {
+  color:rgb(115, 194, 170);
 }

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
-
+import { Link } from 'react-router-dom';
+import { Result } from './result_page';
 
 export const Home = () => {
 
@@ -21,11 +22,10 @@ export const Home = () => {
         setDogs(dogs.map((dog, idx) => {
           return (
             <p className='each-breed' key={idx}>
-              {dog}
+              <Link to='/result'>{dog}</Link>
             </p>
           )
         }));
-        console.log(Array.isArray(dogs), 'key')
       })
   }
 
@@ -40,7 +40,7 @@ export const Home = () => {
             setBreed(e.target.value)
           }}
         />
-        <button className='search-button'>search</button>
+        <button className='search-button'>WOFF</button>
       </form>
       <div className="list-container">
         <div>List Of Dogs</div>
