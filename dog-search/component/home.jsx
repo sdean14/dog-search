@@ -6,10 +6,10 @@ export const Home = () => {
   const [breed, setBreed] = useState('');
   const [dogs, setDogs] = useState('');
 
-  const inputSubmit = (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
-    console.log('form submitted!yay')
-
+    console.log('form submitted!yay');
+    setBreed('', breed);
   }
 
   const listOfDogs = () => {
@@ -32,7 +32,7 @@ export const Home = () => {
   return (
     <div className='body'>
 
-      <form className='search-bar' onSubmit={inputSubmit}>
+      <form className='search-bar' onSubmit={handleSubmit}>
         <label>Search Dogs </label>
         <input type="text" placeholder='dog breed'
           value={breed}
@@ -43,7 +43,7 @@ export const Home = () => {
         <button className='search-button'>search</button>
       </form>
       <div className="list-container">
-        <div>List Of Dogs</div> 
+        <div>List Of Dogs</div>
         <div className='all-dogs'>
           {dogs ? dogs : listOfDogs()}
         </div>

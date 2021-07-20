@@ -83,6 +83,7 @@ input {
   grid-area: list;
   background: rgb(230, 218, 198);
   padding: 20px;
+  margin-bottom: 20px;
   display: flex;
   flex-direction: column;
 } 
