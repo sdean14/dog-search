@@ -20,9 +20,9 @@ export const Home = () => {
         let dogs = Object.keys(obj[0])
         setDogs(dogs.map((dog, idx) => {
           return (
-            <div key={idx}>
+            <p className='each-breed' key={idx}>
               {dog}
-            </div>
+            </p>
           )
         }));
         console.log(Array.isArray(dogs), 'key')
@@ -32,24 +32,24 @@ export const Home = () => {
   return (
     <div className='body'>
 
-      <div>
-        <form className='search-bar' onSubmit={inputSubmit}>
-          <label>Dog Breed</label>
-          <input type="text" placeholder='dog breed'
-            value={breed}
-            onChange={(e) => {
-              setBreed(e.target.value)
-            }}
-          />
-          <button className='search-button'>search</button>
-        </form>
-        <label >list of dogs</label>
-        <div className='list each-breed'>
+      <form className='search-bar' onSubmit={inputSubmit}>
+        <label>Search Dogs </label>
+        <input type="text" placeholder='dog breed'
+          value={breed}
+          onChange={(e) => {
+            setBreed(e.target.value)
+          }}
+        />
+        <button className='search-button'>search</button>
+      </form>
+      <div className="list-container">
+        <div>List Of Dogs</div> 
+        <div className='all-dogs'>
           {dogs ? dogs : listOfDogs()}
         </div>
-
       </div>
 
     </div>
+
   );
 }
