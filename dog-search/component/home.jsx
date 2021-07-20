@@ -17,17 +17,15 @@ export const Home = () => {
       .then(res => res.json())
       .then(data => {
         let obj = Object.values(data)
-        let dogs = Object.keys(obj[0])        
-        setDogs(dogs);
-        console.log( Array.isArray(dogs), 'key')
-
-        // return(
-        //   <div> oooo
-        //  {pups.map((ele,i)=>{
-        //    <div>{ele}</div>
-        //  })}
-        //   </div>
-        // )
+        let dogs = Object.keys(obj[0])
+        setDogs(dogs.map((dog, idx) => {
+          return (
+            <div key={idx}>
+              {dog}
+            </div>
+          )
+        }));
+        console.log(Array.isArray(dogs), 'key')
       })
   }
 
@@ -47,13 +45,7 @@ export const Home = () => {
         </form>
         <label >list of dogs</label>
         <div className='list each-breed'>
-          {dogs ? 
-          // dogs.map((dog, idx) => {
-            // <div key={idx}>
-              dogs
-            // </div>
-          // }) 
-          : listOfDogs()}
+          {dogs ? dogs : listOfDogs()}
         </div>
 
       </div>
