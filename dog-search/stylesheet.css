@@ -1,0 +1,64 @@
+/* reset css */
+html, body, header, nav, h1, a,
+ul, li, strong, main, i,
+section, img, div, h2, p, form,
+fieldset, label, textarea,
+span, article, footer, time, small {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font: sans-serif;
+  color: inherit;
+  text-align: inherit;
+  text-decoration: inherit;
+  vertical-align: inherit;
+  box-sizing: inherit;
+  background: transparent;
+  list-style: none;
+}
+
+.whole-page{
+  background-color: rgb(230, 218, 198);
+  color: rgb(66, 63, 71);
+  min-height: 100vh;
+  display: grid;
+  grid-template: 
+    "header    header    header" 100px
+    /* "...         ...         ..." 20px */
+    "searchbar searchbar searchbar" 150px
+    "list        list         list" 1fr
+    /* "...           ...         ..." 20px */
+    "footer       footer     footer" 150px
+    /150px 1fr 150px;
+}
+.header {
+  background-color: rgb(115, 194, 170);
+  font-size: 40px;
+  padding: 20px;
+  font-family: Palatino, "Palatino LT STD", "Palatino Linotype", "Book Antiqua", Georgia, serif;
+  grid-area: header;
+}
+
+.footer{
+  background-color: rgb(174, 66, 71);
+  text-align: center;
+  color: rgb(66, 63, 71);
+  font-family: Palatino, "Palatino LT STD", "Palatino Linotype", "Book Antiqua", Georgia, serif;
+  grid-area: footer;
+}
+
+.search-bar{
+  grid-area: searchbar;
+  margin: 50px;
+}
+
+.list {
+  grid-area: list;
+  text-align: center;
+  margin: 50px;
+}
+
+.each-breed {
+  background: chartreuse;
+}

@@ -5,9 +5,9 @@ import { Home } from './home';
 export const Result = () => {
 
   return (
-    <div>
+    <div >
 
-      <div>
+      <div className='list'>
         <div>dog1</div>
         <div>dog2</div>
         <div>dog3</div>

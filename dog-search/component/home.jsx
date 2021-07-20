@@ -9,40 +9,33 @@ export const Home = () => {
   const inputSubmit = (e) => {
     e.preventDefault();
     console.log('form submitted!yay')
-    
+
   }
-  
+
   const listOfDogs = () => {
     let ans = fetch('https://dog.ceo/api/breeds/list/all')
       .then(res => res.json())
       .then(data => {
         let obj = Object.values(data)
-        let dogs = Object.keys(obj[0])
-        // dogs = dogs.join(' ')
+        let dogs = Object.keys(obj[0])        
         setDogs(dogs);
-        // console.log(typeof dogs, 'key')   
-         
-          // return(
-          //   <div> oooo
-          //  {pups.map((ele,i)=>{
-          //    <div>{ele}</div>
-          //  })}
-          //   </div>
-          // )
+        console.log( Array.isArray(dogs), 'key')
+
+        // return(
+        //   <div> oooo
+        //  {pups.map((ele,i)=>{
+        //    <div>{ele}</div>
+        //  })}
+        //   </div>
+        // )
       })
   }
 
-  const bana = () => {
-    return(
-      <div>bana TEST</div>
-    )
-  }
-
   return (
-    <div>
+    <div className='body'>
 
       <div>
-        <form onSubmit={inputSubmit}>
+        <form className='search-bar' onSubmit={inputSubmit}>
           <label>Dog Breed</label>
           <input type="text" placeholder='dog breed'
             value={breed}
@@ -50,14 +43,20 @@ export const Home = () => {
               setBreed(e.target.value)
             }}
           />
+          <button className='search-button'>search</button>
         </form>
+        <label >list of dogs</label>
+        <div className='list each-breed'>
+          {dogs ? 
+          // dogs.map((dog, idx) => {
+            // <div key={idx}>
+              dogs
+            // </div>
+          // }) 
+          : listOfDogs()}
+        </div>
 
-        <h2>Im body</h2> 
-        <div>list below...someday</div>
-        {/* {listOfDogs()} ------ */}
-        {bana()}
-        
-      </div>{dogs}
+      </div>
 
     </div>
   );
