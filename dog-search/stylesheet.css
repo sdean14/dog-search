@@ -37,6 +37,7 @@ span, article, footer, time, small {
 
 .header {
   background-color: rgb(115, 194, 170);
+  color: rgb(230, 218, 198);
   font-size: 40px;
   padding: 10px;
   padding-left: 50px;

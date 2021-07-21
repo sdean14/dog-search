@@ -6,7 +6,7 @@ import { Result } from './result_page';
 const Root = () => {
   return (
     <div className='whole-page'>
-      <header className='header'>All about Pups</header>
+      <header className='header'>All About Pups</header>
       <HashRouter>
         <Switch>
           <Route exact path='/'> <Home /></Route>
@@ -14,7 +14,7 @@ const Root = () => {
         </Switch>
       </HashRouter>
       <footer className='footer'>
-        <a href="https://www.linkedin.com/in/satomi-dean-3ab13b105/">Satomi Dean</a>
+        <a href="https://satomi-dean.com/">Satomi Dean</a>
         <div>2021</div>
       </footer>
     </div>
