@@ -3,7 +3,6 @@ import { Link, Redirect } from 'react-router-dom';
 import { Home } from './home';
 
 export const Result = (props) => {
-  console.log(props.location.state.dog, 'name')
   const [dogImgs, setDogImgs] = useState('');
 
 
@@ -13,11 +12,10 @@ export const Result = (props) => {
       .then(data => {
         let arrs = Object.values(data);
         let imgs = Object.values(arrs[0]);
-        console.log(imgs[0], 'data');
         setDogImgs(imgs.map((img, idx) => {
           return (
             <div key={idx}>
-              <img src={img} alt="dog"></img>
+              <img className='each-img' src={img} alt="dog"></img>
             </div>
           )
         }))
@@ -25,14 +23,14 @@ export const Result = (props) => {
   }
 
   return (
-    <div >
+    <div className='body'>
 
-      <div className='list'>
-        {props.location.state.dog ? props.location.state.dog : ''}
-        {dogImgs ? dogImgs : fetchImg()}
+      <div className="top-container">
+        <p className='name-of-breed'>{props.location.state.dog ? props.location.state.dog : ''}</p> 
+        <Link to='/'><button className='back-btn'>Back</button></Link>
       </div>
+      <div className="list-container img-con">{dogImgs ? dogImgs : fetchImg()}</div>
 
-      <Link to='/'><button>Back</button></Link>
 
     </div>
   );

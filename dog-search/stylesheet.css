@@ -28,15 +28,15 @@ span, article, footer, time, small {
   min-height: 100vh;
   display: grid;
   grid-template: 
-    "header" 100px
+    "header" 80px
     "body" 1fr
-    "footer" 150px
+    "footer" 100px
     / 100vw ;
 }
 .header {
   background-color: rgb(115, 194, 170);
   font-size: 40px;
-  padding: 20px;
+  padding: 10px;
   padding-left: 50px;
   font-family: Palatino, "Palatino LT STD", "Palatino Linotype", "Book Antiqua", Georgia, serif;
   grid-area: header;
@@ -45,7 +45,7 @@ span, article, footer, time, small {
 .footer{
   background-color: rgb(174, 66, 71);
   text-align: center;
-  padding-top: 20px;
+  padding-top: 30px;
   color: rgb(226, 192, 110);
   grid-area: footer;
 } 
@@ -56,15 +56,18 @@ span, article, footer, time, small {
   text-align: center;
   display: grid;
   grid-template: 
-    "... search ..."100px
+    "...   ...   ..." 20px
+    "... search ..." 100px
+    "...   ...   ..." 10px
     "...  list  ..." 1fr
-    /auto 500px auto;
+    "...   ...   ..." min(40px)
+    /auto 800px auto;
 }
 button {
   background: rgb(174, 66, 71);
   color: rgb(230, 218, 198);
   padding: 4px;
-  font-size: 15px;
+  font-size: 20px;
   font-weight: bold;
   padding: 10px 20px 10px 20px;
   border-radius: 5px;
@@ -73,6 +76,7 @@ button {
 input {
   background: rgb(230, 218, 198);
   padding: 10px 20px 10px 20px;
+  font-size: 20px;
   border-radius: 5px;
   margin: 0PX 10PX;
 }
@@ -94,11 +98,28 @@ input {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  padding: 10px;
 }
 .each-breed{
-  margin-right: 10px;
+  margin: 5px 10px;
 }
  .each-breed:hover {
   color:rgb(115, 194, 170);
+}
+
+
+/* result page */
+.top-container{
+  grid-area: search;
+}
+.name-of-breed {
+  font-size: 30px;
+}
+
+.each-img {
+  margin: 10px;
+  background-size: cover;
+  max-width: 500px;
+}
+.back-btn {
+  margin: 20px;
 }

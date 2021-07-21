@@ -14,7 +14,8 @@ const Root = () => {
         </Switch>
       </HashRouter>
       <footer className='footer'>
-        <a href="https://www.linkedin.com/in/satomi-dean-3ab13b105/">satomi dean</a>
+        <a href="https://www.linkedin.com/in/satomi-dean-3ab13b105/">Satomi Dean</a>
+        <div>2021</div>
       </footer>
     </div>
   )
