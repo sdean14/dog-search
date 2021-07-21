@@ -3,11 +3,13 @@ import { Link, Redirect } from 'react-router-dom';
 import { Home } from './home';
 
 export const Result = (props) => {
-console.log(props)
+console.log(props.location.state.dog)
+
   return (
     <div >
 
       <div className='list'>
+        {props.location.state.dog ? props.location.state.dog: ''}
         <div>dog1</div>
         <div>dog2</div>
         <div>dog3</div>

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, Redirect } from 'react-router-dom';
 import { Result } from './result_page';
 
 export const Home = () => {
@@ -9,7 +9,6 @@ export const Home = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log('form submitted!yay');
     setBreed('', breed);
   }
 
@@ -22,7 +21,12 @@ export const Home = () => {
         setDogs(dogs.map((dog, idx) => {
           return (
             <p className='each-breed' key={idx}>
-              <Link to='/result'>{dog}</Link>
+              <Link to={{
+                pathname: '/result',
+                state: { dog: dog }
+              }} >
+                {dog}
+              </Link>
             </p>
           )
         }));
@@ -36,12 +40,11 @@ export const Home = () => {
         <label>Search Dogs </label>
         <input type="text" placeholder='dog breed'
           value={breed}
-          onChange={(e) => {
-            setBreed(e.target.value)
-          }}
+          onChange={(e) => { setBreed(e.target.value) }}
         />
-        <button className='search-button'>WOFF</button>
+        <Link to='/result'><button className='search-button'>WOFF</button> </Link>
       </form>
+
       <div className="list-container">
         <div>List Of Dogs</div>
         <div className='all-dogs'>
