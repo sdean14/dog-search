@@ -66,7 +66,7 @@ span, article, footer, time, small {
     "...   ...   ..." min(40px)
     /auto 800px auto;
 }
-button {
+.search-dog-label {
   background: rgb(174, 66, 71);
   color: rgb(230, 218, 198);
   font-size: 20px;
@@ -77,10 +77,14 @@ button {
 
 input {
   background: rgb(230, 218, 198);
-  padding: 10px 20px 10px 20px;
   font-size: 20px;
+  font-weight: bold;
+  padding: 10px 20px 10px 20px;
   border-radius: 5px;
   margin: 0PX 10PX;
+  height: 27px;
+  font-family: Palatino, "Palatino LT STD", "Palatino Linotype", "Book Antiqua", Georgia, serif;
+
 }
 .search-bar{
   grid-area: search;
