@@ -23,9 +23,9 @@ span, article, footer, time, small {
   font-family: Palatino, "Palatino LT STD", "Palatino Linotype", "Book Antiqua", Georgia, serif;
   font-size: 20px;
   font-weight: 600;
-  width: 100vw;
   background-color: rgb(226, 192, 110);
   color: rgb(66, 63, 71);
+  width: 100vw;
   min-height: 100vh;
   display: grid;
   grid-template: 
@@ -36,20 +36,20 @@ span, article, footer, time, small {
 }
 
 .header {
+  font-family: Palatino, "Palatino LT STD", "Palatino Linotype", "Book Antiqua", Georgia, serif;
+  font-size: 40px;
   background-color: rgb(115, 194, 170);
   color: rgb(230, 218, 198);
-  font-size: 40px;
   padding: 10px;
   padding-left: 50px;
-  font-family: Palatino, "Palatino LT STD", "Palatino Linotype", "Book Antiqua", Georgia, serif;
   grid-area: header;
 }
 
 .footer{
   background-color: rgb(174, 66, 71);
+  color: rgb(226, 192, 110);
   text-align: center;
   padding-top: 30px;
-  color: rgb(226, 192, 110);
   grid-area: footer;
 } 
 
@@ -78,6 +78,7 @@ span, article, footer, time, small {
 
 
 input {
+  font-family: Palatino, "Palatino LT STD", "Palatino Linotype", "Book Antiqua", Georgia, serif;
   background: rgb(230, 218, 198);
   font-size: 20px;
   font-weight: bold;
@@ -85,7 +86,6 @@ input {
   border-radius: 5px;
   margin: 0PX 10PX;
   height: 27px;
-  font-family: Palatino, "Palatino LT STD", "Palatino Linotype", "Book Antiqua", Georgia, serif;
 
 }
 .search-bar{
@@ -123,9 +123,11 @@ input {
   display: flex;
   justify-content: space-evenly;
 }
+
 .name-of-breed {
   font-size: 30px;
 }
+
 button {
   font-family: Palatino, "Palatino LT STD", "Palatino Linotype", "Book Antiqua", Georgia, serif;
   background: rgb(174, 66, 71);
@@ -135,6 +137,7 @@ button {
   padding: 10px 20px 10px 20px;
   border-radius: 5px;
 }
+
 .each-img {
   margin: 10px;
   background-size: cover;
