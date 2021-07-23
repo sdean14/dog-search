@@ -1,10 +1,9 @@
-import React, { useState, useEffect } from 'react';
-import { Link, Redirect } from 'react-router-dom';
-import { Home } from './home';
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 export const Result = (props) => {
+  
   const [dogImgs, setDogImgs] = useState('');
-
 
   const fetchImg = () => {
     fetch(`https://dog.ceo/api/breed/${props.location.state.dog}/images/random/4`)
@@ -26,11 +25,10 @@ export const Result = (props) => {
     <div className='body'>
 
       <div className="top-container">
-        <p className='name-of-breed'>{props.location.state.dog ? props.location.state.dog : ''}</p> 
+        <p className='name-of-breed'>{props.location.state.dog ? props.location.state.dog : ''}</p>
         <Link to='/'><button className='back-btn'>Back</button></Link>
       </div>
       <div className="list-container img-con">{dogImgs ? dogImgs : fetchImg()}</div>
-
 
     </div>
   );
