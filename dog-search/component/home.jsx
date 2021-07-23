@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link, Redirect } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 export const Home = () => {
 
@@ -8,7 +8,6 @@ export const Home = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    
     setBreed('', breed);
   }
 
@@ -21,6 +20,7 @@ export const Home = () => {
         setDogs(dogs);
       })
   }
+
   const listOfDogs = () => {
     !dogs ? fetchDogList() :
       setDogs(
@@ -48,12 +48,9 @@ export const Home = () => {
       <div className="list-container">
         <div>List Of Dogs</div>
         <div className='all-dogs'>
-          {
-            dogs ? dogs.map((dog, idx) => {
-
+          { dogs ? dogs.map((dog, idx) => {
               return (
                 <p className='each-breed' key={idx}>
-
                   <Link to={{
                     pathname: '/result',
                     state: { dog: dog }
@@ -61,8 +58,7 @@ export const Home = () => {
                     {dog}
                   </Link>
                 </p>
-              )
-            }) : 'No dogs yet'
+              )}) : 'No dogs yet'
           }
         </div>
       </div>
