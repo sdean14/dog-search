@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 export const Result = (props) => {
-  
+
   const [dogImgs, setDogImgs] = useState('');
 
   const fetchImg = () => {
