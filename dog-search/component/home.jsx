@@ -48,17 +48,18 @@ export const Home = () => {
       <div className="list-container">
         <div>List Of Dogs</div>
         <div className='all-dogs'>
-          { dogs ? dogs.map((dog, idx) => {
-              return (
-                <p className='each-breed' key={idx}>
-                  <Link to={{
-                    pathname: '/result',
-                    state: { dog: dog }
-                  }} >
-                    {dog}
-                  </Link>
-                </p>
-              )}) : 'No dogs yet'
+          {dogs ? dogs.map((dog, idx) => {
+            return (
+              <p className='each-breed' key={idx}>
+                <Link to={{
+                  pathname: '/result',
+                  state: { dog: dog }
+                }} >
+                  {dog}
+                </Link>
+              </p>
+            )
+          }) : 'No dogs yet'
           }
         </div>
       </div>
