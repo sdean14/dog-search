@@ -10,7 +10,7 @@ const Root = () => {
       <HashRouter>
         <Switch>
           <Route exact path='/'> <Home /></Route>
-          <Route exact path='/result' component={Result}></Route>
+          <Route exact path='/result' component={ Result }></Route>
         </Switch>
       </HashRouter>
       <footer className='footer'>
